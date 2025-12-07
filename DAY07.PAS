@@ -14,7 +14,6 @@ begin
   for i := 0 to Length(line) - 1 do
     if line[i + 1] = 'S' then beams[i] := 1
     else                      beams[i] := 0;
-  WriteLn(line);
   p1 := 0;
   while not eof(f) do begin
     ReadLn(f, line);
@@ -30,5 +29,4 @@ begin
   for i := 1 to Length(line) - 1 do p2 := p2 + beams[i];
   WriteLn('Part 1: ', p1:0:0);
   WriteLn('Part 2: ', p2:0:0);
-  ReadLn;
 end.
